@@ -1,0 +1,22 @@
+javascript:(
+  async () =>{
+    var url = '';
+    const locationOrigin = window.location.origin;
+    var locationPath = window.location.pathname;
+    if (locationOrigin === 'https://www.amazon.co.jp') {
+      var path = locationPath.slice(locationPath.indexOf('/dp/') + 4);
+      path = path.substr(0, path.indexOf('/'));
+      locationPath = '/dp/' + path;
+    };
+    url = locationOrigin + locationPath;
+    await navigator.clipboard.writeText(url).then( () => {
+      alert('copied');
+    }, (err) => {
+      alert(err);
+    });
+    if(window.confirm('transition?')) {
+      window.location.replace(url);
+    }
+    return;
+  }
+)();
