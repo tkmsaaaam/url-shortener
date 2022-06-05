@@ -3,7 +3,7 @@ javascript:(
     var url = '';
     const locationOrigin = window.location.origin.replace('www.','');
     var locationPath = window.location.pathname;
-    if (locationOrigin === 'https://amazon.co.jp') {
+    if (locationOrigin.startsWith('https://amazon')) {
       var path = locationPath.slice(locationPath.indexOf('/dp/') + 4);
       path = path.substr(0, path.indexOf('/'));
       locationPath = '/dp/' + path;
