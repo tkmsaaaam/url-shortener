@@ -17,7 +17,7 @@ javascript:(
       });
       if(window.confirm('transition?')) {
         window.location.replace(url);
-      }
+      };
       return;
     }catch(e){
       console.log(e);
