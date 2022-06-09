@@ -1,7 +1,6 @@
 javascript:(
   async () =>{
     try {
-      var url = '';
       const locationOrigin = window.location.origin.replace('www.','');
       var locationPath = window.location.pathname;
       if (locationOrigin.startsWith('https://amazon')) {
@@ -9,7 +8,7 @@ javascript:(
         path = path.substr(0, path.indexOf('/'));
         locationPath = '/dp/' + path;
       };
-      url = locationOrigin + locationPath;
+      const url = locationOrigin + locationPath;
       await navigator.clipboard.writeText(url).then( () => {
         alert('copied');
       }, (err) => {
