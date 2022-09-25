@@ -4,20 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "format": "prettier --write 'src/**/*.js'",
+    "lint": "prettier --write '**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tkmsaaaam/url-shortener.git"
   },
-  "author": "",
+  "author": "tkmsaaaam",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tkmsaaaam/url-shortener/issues"
   },
   "homepage": "https://github.com/tkmsaaaam/url-shortener#readme",
   "devDependencies": {
-    "prettier": "^2.6.2"
+    "@types/chrome": "^0.0.197",
+    "prettier": "^2.7.1"
   }
 }
