@@ -3,8 +3,7 @@
 		const DP = '/dp/';
 		const originPath = window.location.pathname;
 		if (originPath.indexOf(DP) === -1) return;
-		const dpEndIndex = originPath.indexOf(DP) + DP.length;
-		const path = originPath.slice(dpEndIndex);
+		const path = originPath.slice(originPath.indexOf(DP) + DP.length);
 		const idEndIndex = path.indexOf('/');
 		const id = path.substring(0, idEndIndex);
 		if (id) {
