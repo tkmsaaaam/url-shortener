@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "outDir": "./url-shortener/build",
+    "allowJs": true,
+    "target": "ES2015",
+    "module": "commonjs",
+    "strict": true
+  },
+  "include": [
+    "./url-shortener/src/**/*"
+  ]
+}
